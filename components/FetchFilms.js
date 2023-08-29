@@ -11,7 +11,7 @@ export default function FetchFilms({ }) {
   useEffect(() => {
     async function fetchFilms() {
       try {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=a2b07930&s=${searchValue}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=a2b07930&s=${searchValue}`);
         if (!response.ok) throw new Error('fetch ' + response.status);
         const data = await response.json();
         if (data.Search) {
