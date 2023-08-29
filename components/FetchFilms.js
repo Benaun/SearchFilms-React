@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import FilmsList from '../components/FilmsList';
 import SearchInput from "./SearchInput";
+import css from './FetchFilms.module.css';
 
 export default function FetchFilms({ }) {
   const
@@ -35,7 +36,7 @@ export default function FetchFilms({ }) {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       <SearchInput searchValue={searchValue} onSearch={handleSearchValue} />
       <FilmsList films={films} />
     </div>
